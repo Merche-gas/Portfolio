@@ -1,0 +1,32 @@
+$inconsolata: 'Inconsolata', monospace;
+$quicksand: 'Quicksand', sans-serif;
+$gristexto: #c4c4c4;
+$rosita: #b772ea;
+
+@font-face {
+    font-family: 'MarkPro';
+    src: url('../fuentes/Mark-Pro-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@mixin wide {
+    @media (max-width: 1500px) {@content;}
+}
+@mixin laptop {
+    @media (max-width: 1280px) {@content;}
+}
+@mixin minilaptop {
+    @media (max-width: 1050px) {@content;}
+}
+@mixin tablet {
+    @media (max-width: 820px) {@content;}
+}
+@mixin movil {
+    @media (max-width: 600px) {@content;}
+}
+@mixin minimovil {
+    @media (max-width: 450px) {@content;}
+}
+
+

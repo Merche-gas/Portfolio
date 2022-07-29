@@ -1,0 +1,25 @@
+//Clases
+.flex {
+    display: flex;
+}
+.jcenter {
+    justify-content: center;
+}
+.acenter {
+    align-items: center;
+}
+.jbetween {
+    justify-content: space-between;
+}
+.jaround{
+    justify-content: space-around;
+}
+.jright{
+    justify-content: right;
+}
+.fdcolumn{
+    flex-direction: column;
+}
+.fwrap{
+    flex-wrap: wrap;
+}

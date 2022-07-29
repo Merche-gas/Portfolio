@@ -1,0 +1,349 @@
+@font-face {
+  font-family: "MarkPro";
+  src: url("../fuentes/Mark-Pro-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+.flex {
+  display: flex;
+}
+
+.jcenter {
+  justify-content: center;
+}
+
+.acenter {
+  align-items: center;
+}
+
+.jbetween {
+  justify-content: space-between;
+}
+
+.jaround {
+  justify-content: space-around;
+}
+
+.jright {
+  justify-content: right;
+}
+
+.fdcolumn {
+  flex-direction: column;
+}
+
+.fwrap {
+  flex-wrap: wrap;
+}
+
+@font-face {
+  font-family: "MarkPro";
+  src: url("../fuentes/Mark-Pro-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+/* Menu*/
+.menu {
+  background-color: black;
+  width: 100%;
+}
+.menu__contenedor {
+  position: fixed;
+  top: 5rem;
+  right: 0;
+  left: 0;
+  padding: 1.3rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(42, 43, 56, 0.9);
+  border: 0.2rem solid #2a2b37;
+  border-radius: 2rem;
+  z-index: 1;
+}
+.menu__flex {
+  display: flex;
+  align-items: center;
+  color: #c4c4c4;
+}
+.menu__flex.hover {
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.menu__flex.hover.active .cerrar {
+  display: block;
+}
+.menu__flex.hover.active .abrir {
+  display: none;
+}
+.menu__flex.hover:hover {
+  transform: scale(95%) translateX(1.5rem);
+}
+.menu__span {
+  display: block;
+  margin: 0 1rem;
+  position: relative;
+}
+.menu__span.cerrar {
+  display: none;
+}
+.menu__span.salida {
+  -webkit-animation-name: salida;
+          animation-name: salida;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes salida {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 10%;
+  }
+}
+@keyframes salida {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 10%;
+  }
+}
+.menu__animation {
+  overflow: hidden;
+}
+.menu__button {
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  display: block;
+  width: 3rem;
+  margin-left: 0.5rem;
+}
+.menu__button.active::before {
+  width: 100%;
+  top: calc(50% - 1.5px);
+  transform: rotate(45deg);
+}
+.menu__button.active::after {
+  width: 100%;
+  top: calc(50% - 1.5px);
+  transform: rotate(-45deg);
+}
+.menu__button.active .menu__linea {
+  display: none;
+}
+.menu__button::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #c4c4c4;
+  position: absolute;
+  top: 0;
+  transition: all 0.5s ease;
+}
+.menu__linea {
+  width: 80%;
+  height: 1px;
+  background-color: #c4c4c4;
+  position: absolute;
+  top: calc(50% - 0.5px);
+  transition: all 0.5s ease;
+}
+.menu__button::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 1px;
+  background-color: #c4c4c4;
+  position: absolute;
+  bottom: 0;
+  transition: all 0.5s ease;
+}
+
+/* Header*/
+.header {
+  background-color: black;
+  position: relative;
+  padding-top: 25rem;
+}
+.header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 20rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/img/sticker.webp);
+}
+.header__wrapper {
+  width: 85rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+.header__titular {
+  margin-left: 3rem;
+}
+.header__span {
+  font-size: 9rem;
+  font-family: "MarkPro";
+  letter-spacing: -0.03em;
+  line-height: 100%;
+  font-weight: 900;
+  color: white;
+}
+.header__span.animado {
+  -webkit-animation: gradient 30s ease infinite;
+          animation: gradient 30s ease infinite;
+  background: linear-gradient(-45deg, #6bc5f8, #cf59e6, #6bc5f8, #cf59e6);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+.header__proyectos {
+  color: #c4c4c4;
+  margin-top: 13rem;
+  display: inline-block;
+  font-size: 1.8rem;
+  line-height: 92.4%;
+  letter-spacing: 0.14em;
+  position: relative;
+  margin-bottom: 5rem;
+}
+.header__proyectos::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  display: block;
+  width: 50%;
+  height: 1px;
+  background: #c4c4c4;
+  transition: all 0.5s ease;
+}
+.header__proyectos:hover::after {
+  width: 98%;
+}
+
+.media {
+  background-color: black;
+}
+.media__wrapper {
+  width: 85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 8rem 0;
+}
+.media audio {
+  background-color: black;
+  width: 20rem;
+  height: 2rem;
+}
+.media__a {
+  color: #c4c4c4;
+  transition: all 0.5s ease;
+}
+.media__a:first-child {
+  margin-right: 2rem;
+}
+.media__a:hover {
+  color: #b772ea;
+  transform: scale(95%) translateX(1.5rem);
+}
+
+@font-face {
+  font-family: "MarkPro";
+  src: url("../fuentes/Mark-Pro-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+/*footer*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inconsolata", monospace;
+  font-size: 1.7rem;
+}
+
+html {
+  font-size: 62.5%;
+  margin: auto;
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contenedor {
+  width: 85rem;
+  margin: auto;
+  color: #c4c4c4;
+}
+
+.proyectos {
+  margin-top: 20rem;
+}
+.proyectos__h1 {
+  font-family: "MarkPro";
+  font-size: 5rem;
+  letter-spacing: -0.04em;
+}
+.proyectos__h1.animado {
+  -webkit-animation: gradient 30s ease infinite;
+          animation: gradient 30s ease infinite;
+  background: linear-gradient(90deg, #b0f3f1, #ffcfdf);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+.proyectos__p {
+  margin: 2rem 0 15rem;
+}/*# sourceMappingURL=style.css.map */
