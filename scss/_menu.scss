@@ -16,8 +16,9 @@
         width: 60%;
         margin-left: auto;
         margin-right: auto;
-        background: rgba(42,43,56,.90);
+        background: rgba(42,43,56,.2);
         border: 0.2rem solid #2a2b37;
+        backdrop-filter: blur(95px);
         border-radius: 2rem;
         z-index: 1;
     }
@@ -43,7 +44,7 @@
     }
     &__span{
         display: block;
-        margin: 0 1rem;
+        margin: 0 1.5rem;
         position: relative;
         &.cerrar{
             display: none;
@@ -133,9 +134,11 @@
         left: 0;
         width: 20rem;
         height: 20rem;
+        z-index: 1;
+        background-color: yellow;
         background-repeat: no-repeat;
         background-size: contain;
-        background-image: url(/img/sticker.webp);
+        background-image: url(/img/sticker.png);
     }
     &__wrapper{
         width: 85rem;
@@ -218,5 +221,7 @@
         color: $rosita;
         transform: scale(95%) translateX(1.5rem); 
      }
+    
 }
+
 

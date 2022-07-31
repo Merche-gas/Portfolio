@@ -2,10 +2,12 @@ $inconsolata: 'Inconsolata', monospace;
 $quicksand: 'Quicksand', sans-serif;
 $gristexto: #c4c4c4;
 $rosita: #b772ea;
+$verde: #0c3929;
+$verdeclaro:#6b9796;
 
 @font-face {
     font-family: 'MarkPro';
-    src: url('../fuentes/Mark-Pro-Bold.ttf') format('truetype');
+    src: url('../fuentes/MarkPro-Heavy.woff') format('truetype');
     font-style: normal;
     font-weight: bold;
 }
