@@ -1,6 +1,6 @@
 @font-face {
   font-family: "MarkPro";
-  src: url("../fuentes/MarkPro-Heavy.woff") format("truetype");
+  src: url("fuentes/MarkPro-Heavy.woff") format("truetype");
   font-style: normal;
   font-weight: bold;
 }
@@ -53,7 +53,7 @@
 
 @font-face {
   font-family: "MarkPro";
-  src: url("../fuentes/MarkPro-Heavy.woff") format("truetype");
+  src: url("fuentes/MarkPro-Heavy.woff") format("truetype");
   font-style: normal;
   font-weight: bold;
 }
@@ -219,10 +219,11 @@
   background-color: yellow;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url(/img/sticker.png);
+  background-image: url("img/sticker.png");
 }
 .header__wrapper {
-  width: 85rem;
+  width: 100%;
+  max-width: 85rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -298,7 +299,8 @@
   background-color: black;
 }
 .media__wrapper {
-  width: 85rem;
+  width: 100%;
+  max-width: 85rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -332,7 +334,7 @@
 
 @font-face {
   font-family: "MarkPro";
-  src: url("../fuentes/MarkPro-Heavy.woff") format("truetype");
+  src: url("fuentes/MarkPro-Heavy.woff") format("truetype");
   font-style: normal;
   font-weight: bold;
 }
@@ -342,15 +344,18 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Inconsolata", monospace;
-  font-size: 1.7rem;
+  border: 0;
 }
 
 html {
   font-size: 62.5%;
-  margin: auto;
-  background-color: black;
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inconsolata", monospace;
+  font-size: 1.7rem;
+  background-color: black;
 }
 
 a {
@@ -358,7 +363,8 @@ a {
 }
 
 .contenedor {
-  width: 85rem;
+  width: 100%;
+  max-width: 85rem;
   margin: auto;
   color: #c4c4c4;
 }
@@ -396,7 +402,8 @@ a {
   margin: 2rem 0 15rem;
 }
 .proyectos__tarjeta {
-  width: 85rem;
+  width: 100%;
+  max-width: 85rem;
   margin: 20rem auto;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(35, 37, 49, 0.5)), to(rgba(15, 15, 24, 0.5)));
   background: linear-gradient(180deg, rgba(35, 37, 49, 0.5), rgba(15, 15, 24, 0.5));
@@ -423,7 +430,6 @@ a {
   height: 15rem;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url(img/01.svg);
 }
 .proyectos__tarjeta.dos::before {
   content: "";
@@ -435,7 +441,6 @@ a {
   height: 15rem;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url(img/02.svg);
 }
 .proyectos__tarjeta.tres::before {
   content: "";
@@ -447,7 +452,6 @@ a {
   height: 15rem;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url(img/03.svg);
 }
 .proyectos__centro {
   width: 35rem;

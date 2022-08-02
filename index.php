@@ -9,7 +9,7 @@
 
     <main class = "contenedor" >
         
-        <p>¡Hola desconocido! 🖖 Me llamo Merche y soy desarrolladora web front end. <br> Me apasiona crear webs que ayuden a la gente en su día a día.</p>
+        <p>¡Hola! 🖖 Me llamo Merche y soy desarrolladora web front end. <br> Me apasiona crear webs que ayuden a la gente en su día a día.</p>
         <section class="proyectos" id="seccionProyectos">
             <h1 class="proyectos__h1 animado">Sip, he trabajado muy duro. </h1>
             <p class="proyectos__p">En cada proyecto he puesto todo mi esfuerzo. </p>
