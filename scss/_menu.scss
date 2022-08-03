@@ -135,13 +135,12 @@
         width: 20rem;
         height: 20rem;
         z-index: 1;
-        background-color: yellow;
         background-repeat: no-repeat;
         background-size: contain;
         background-image: url('img/sticker.png');
     }
     &__wrapper{
-        width: 100%;
+        width: 95%;
         max-width: 85rem;
         margin-right: auto;
         margin-left: auto;
@@ -199,7 +198,7 @@
 .media{
     background-color: black;
     &__wrapper{
-        width: 100%;
+        width: 95%;
         max-width: 85rem;
         display: flex;
         justify-content: space-between;
