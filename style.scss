@@ -15,12 +15,41 @@ body{
     font-family: $inconsolata;
     font-size: 1.7rem;
     background-color: $negro;
+    overflow-x: hidden;
 }
 a{
     text-decoration: none;
 }
 ul {
     list-style: none;
+}
+.mouse{
+    width: 6rem;
+    height: 6rem;
+
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 2;
+
+    pointer-events: none;
+
+    transition: all .1s ease;
+
+    img{
+        width: 100%;
+    }
+    &.rotar{
+        animation: rotating 6s linear infinite;
+    }
+    @keyframes rotating{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
 }
 .contenedor{
     width: 95%;
@@ -347,6 +376,11 @@ ul {
 }
 .contacto{
     margin: 0 auto 15rem;
+    transform: translateX(10%) translateY(10%);
+        transition: all 1s ease;
+        &.active{
+            transform: translateX(0%) translateY(0%);
+        }
 
     &__h3{
         font-family: 'MarkPro';

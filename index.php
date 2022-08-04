@@ -5,6 +5,9 @@
 <title>Portfolio</title>
 </head>
 <body>
+    <div class="mouse rotar">
+        <img src="img/mouse.png" alt="raton">
+    </div>
     <?php include "componentes/menu.html"; ?>
 
     <main class = "contenedor" >

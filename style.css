@@ -386,6 +386,7 @@ body {
   font-family: "Inconsolata", monospace;
   font-size: 1.7rem;
   background-color: #10101a;
+  overflow-x: hidden;
 }
 
 a {
@@ -394,6 +395,45 @@ a {
 
 ul {
   list-style: none;
+}
+
+.mouse {
+  width: 6rem;
+  height: 6rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+.mouse img {
+  width: 100%;
+}
+.mouse.rotar {
+  -webkit-animation: rotating 6s linear infinite;
+          animation: rotating 6s linear infinite;
+}
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .contenedor {
@@ -749,6 +789,14 @@ ul {
 
 .contacto {
   margin: 0 auto 15rem;
+  -webkit-transform: translateX(10%) translateY(10%);
+          transform: translateX(10%) translateY(10%);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.contacto.active {
+  -webkit-transform: translateX(0%) translateY(0%);
+          transform: translateX(0%) translateY(0%);
 }
 .contacto__h3 {
   font-family: "MarkPro";
