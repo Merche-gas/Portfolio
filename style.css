@@ -59,7 +59,7 @@
 }
 /* Menu*/
 .menu {
-  background-color: black;
+  background-color: #10101a;
   width: 100%;
 }
 .menu__contenedor {
@@ -77,7 +77,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 60%;
+  width: 90%;
+  max-width: 80rem;
   margin-left: auto;
   margin-right: auto;
   background: rgba(42, 43, 56, 0.2);
@@ -146,6 +147,9 @@
 .menu__animation {
   overflow: hidden;
 }
+.menu__img {
+  width: 3rem;
+}
 .menu__button {
   height: 1.5rem;
   position: relative;
@@ -203,9 +207,9 @@
 
 /* Header*/
 .header {
-  background-color: black;
+  background-color: #10101a;
   position: relative;
-  padding-top: 25rem;
+  padding-top: 20rem;
 }
 .header::before {
   content: "";
@@ -218,7 +222,6 @@
   z-index: 1;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("img/sticker.png");
 }
 .header__wrapper {
   width: 95%;
@@ -295,7 +298,7 @@
 }
 
 .media {
-  background-color: black;
+  background-color: #10101a;
 }
 .media__wrapper {
   width: 95%;
@@ -338,6 +341,34 @@
   font-weight: bold;
 }
 /*footer*/
+.footer {
+  width: 100%;
+  border-top: 0.5px solid #c4c4c4;
+}
+.footer__wrapper {
+  width: 95%;
+  max-width: 85rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  padding: 2.5rem 0;
+}
+.footer__img {
+  width: 2.5rem;
+}
+.footer__p {
+  color: #c4c4c4;
+  font-size: 1.4rem;
+  margin-left: 1.5rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -371,14 +402,28 @@ ul {
   margin: auto;
   color: #c4c4c4;
 }
+.contenedor__p {
+  -webkit-transform: translateX(10%) translateY(10%);
+          transform: translateX(10%) translateY(10%);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.contenedor__p.active {
+  -webkit-transform: translateX(0%) translateY(0%);
+          transform: translateX(0%) translateY(0%);
+}
 
 .proyectos {
-  margin-top: 20rem;
+  margin-top: 15rem;
 }
 .proyectos__h1 {
   font-family: "MarkPro";
   font-size: 5rem;
   letter-spacing: -0.04em;
+  -webkit-transform: translateX(10%) translateY(10%);
+          transform: translateX(10%) translateY(10%);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 .proyectos__h1.animado {
   -webkit-animation: gradient 30s ease infinite;
@@ -401,8 +446,20 @@ ul {
     background-position: 0 50%;
   }
 }
+.proyectos__h1.active {
+  -webkit-transform: translateX(0%) translateY(0%);
+          transform: translateX(0%) translateY(0%);
+}
 .proyectos__p {
   margin: 2rem 0 15rem;
+  -webkit-transform: translateX(10%) translateY(10%);
+          transform: translateX(10%) translateY(10%);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.proyectos__p.active {
+  -webkit-transform: translateX(0%) translateY(0%);
+          transform: translateX(0%) translateY(0%);
 }
 .proyectos .proyectos__centro {
   width: 35rem;
@@ -419,6 +476,8 @@ ul {
   width: 95%;
   max-width: 85rem;
   margin: 15rem auto;
+  padding: 6rem;
+  position: relative;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(35, 37, 49, 0.5)), to(rgba(15, 15, 24, 0.5)));
   background: linear-gradient(180deg, rgba(35, 37, 49, 0.5), rgba(15, 15, 24, 0.5));
   border: 0.2rem solid #20222e;
@@ -431,8 +490,16 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 6rem;
-  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transform: translateX(10%) translateY(10%);
+          transform: translateX(10%) translateY(10%);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.proyectos__tarjeta.active {
+  -webkit-transform: translateX(0%) translateY(0%);
+          transform: translateX(0%) translateY(0%);
 }
 .proyectos__tarjeta.fantic .proyectos__centro {
   background-image: url(img/fantic_s.png);
@@ -585,7 +652,15 @@ ul {
 }
 
 .tabs {
-  margin-bottom: 15rem;
+  margin-bottom: 45rem;
+  -webkit-transform: translateX(10%) translateY(10%);
+          transform: translateX(10%) translateY(10%);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.tabs.active {
+  -webkit-transform: translateX(0%) translateY(0%);
+          transform: translateX(0%) translateY(0%);
 }
 .tabs__ul {
   display: -webkit-box;
@@ -599,7 +674,7 @@ ul {
           align-items: center;
 }
 .tabs__btn {
-  padding: 40px 20px;
+  padding: 25px 20px;
   min-width: 6rem;
   margin-right: 2rem;
   border-radius: 1.3rem;
@@ -608,7 +683,6 @@ ul {
   color: #c4c4c4;
   position: relative;
   overflow: hidden;
-  background-color: blueviolet;
 }
 .tabs__btn.active .tabs__overflow {
   left: 0;
@@ -624,10 +698,10 @@ ul {
   position: absolute;
   top: calc(50% - 33px);
   left: -100%;
-  z-index: 1;
   opacity: 0;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  background-color: #10101a;
 }
 .tabs__overflow img {
   width: 5rem;
@@ -640,7 +714,7 @@ ul {
 }
 .tabs__seccion {
   max-width: 85rem;
-  min-height: 35rem;
+  min-height: 30rem;
   position: absolute;
   top: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(35, 37, 49, 0.5)), to(rgba(15, 15, 24, 0.5)));
@@ -671,4 +745,39 @@ ul {
   -ms-writing-mode: tb-lr;
   writing-mode: vertical-lr;
   margin-right: 5rem;
+}
+
+.contacto {
+  margin: 0 auto 15rem;
+}
+.contacto__h3 {
+  font-family: "MarkPro";
+  font-size: 3rem;
+  letter-spacing: -0.04em;
+  -webkit-animation: gradient 30s ease infinite;
+          animation: gradient 30s ease infinite;
+  background: -webkit-gradient(linear, left top, right top, from(#b0f3f1), to(#ffcfdf));
+  background: linear-gradient(90deg, #b0f3f1, #ffcfdf);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+}
+.contacto__h3:nth-child(2) {
+  font-size: 1.5rem;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+.contacto__p {
+  margin-bottom: 4rem;
 }

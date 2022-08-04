@@ -2,7 +2,7 @@
 
 /* Menu*/
 .menu{
-    background-color: black;
+    background-color: $negro;
     width: 100%;
     &__contenedor{
         position: fixed;
@@ -13,7 +13,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 60%;
+        width: 90%;
+        max-width: 80rem;
         margin-left: auto;
         margin-right: auto;
         background: rgba(42,43,56,.2);
@@ -21,6 +22,7 @@
         backdrop-filter: blur(95px);
         border-radius: 2rem;
         z-index: 1;
+        
     }
     &__flex{
         display: flex;
@@ -66,6 +68,9 @@
     }
     &__animation{
         overflow:hidden;
+    }
+    &__img{
+        width: 3rem;
     }
     &__button{
         height: 1.5rem;
@@ -123,9 +128,9 @@
 /* Header*/
 
 .header{
-    background-color: black;
+    background-color: $negro;
     position: relative;
-    padding-top: 25rem;
+    padding-top: 20rem;
     &::before{
         content: "";
         display: block;
@@ -137,7 +142,7 @@
         z-index: 1;
         background-repeat: no-repeat;
         background-size: contain;
-        background-image: url('img/sticker.png');
+        // background-image: url('img/sticker.png');
     }
     &__wrapper{
         width: 95%;
@@ -196,7 +201,7 @@
     }
 }
 .media{
-    background-color: black;
+    background-color: $negro;
     &__wrapper{
         width: 95%;
         max-width: 85rem;

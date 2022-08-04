@@ -27,9 +27,16 @@ ul {
     max-width: 85rem;
     margin: auto;
     color: $gristexto;
+    &__p{
+        transform: translateX(10%) translateY(10%);
+        transition: all 1s ease;
+        &.active{
+            transform: translateX(0%) translateY(0%);
+        }
+    }
 }
 .proyectos{
-    margin-top: 20rem;
+    margin-top: 15rem;
     &__h1{
         font-family: 'MarkPro';
         font-size: 5rem;
@@ -47,9 +54,19 @@ ul {
             50% { background-position: 100% 50% }
             100% { background-position: 0 50% }
         }
+        transform: translateX(10%) translateY(10%);
+        transition: all 1s ease;
+        &.active{
+            transform: translateX(0%) translateY(0%);
+        }
     }
     &__p{
         margin: 2rem 0 15rem;
+        transform: translateX(10%) translateY(10%);
+        transition: all 1s ease;
+        &.active{
+            transform: translateX(0%) translateY(0%);
+        }
     }
     .proyectos__centro{
         width: 35rem;
@@ -66,14 +83,24 @@ ul {
         width: 95%;
         max-width: 85rem;
         margin: 15rem auto;
+        padding: 6rem;
+
+        position: relative; 
+
         background: linear-gradient(180deg,rgba(35,37,49,.5),rgba(15,15,24,.5));
         border: 0.2rem solid #20222e;
         backdrop-filter: blur(50px);
         border-radius: 7.3rem;
+
         display: flex;
         align-items: center;
-        padding: 6rem;
-        position: relative; 
+        flex-wrap: wrap;
+
+        transform: translateX(10%) translateY(10%);
+        transition: all 1s ease;
+        &.active{
+            transform: translateX(0%) translateY(0%);
+        }
     }
     &__tarjeta.fantic{
         .proyectos__centro{
@@ -229,7 +256,12 @@ ul {
     }
 }
 .tabs{
-    margin-bottom: 15rem;
+    margin-bottom: 45rem;
+    transform: translateX(10%) translateY(10%);
+    transition: all 1s ease;
+        &.active{
+            transform: translateX(0%) translateY(0%);
+        }
 
     &__ul{
         display: flex;
@@ -238,7 +270,7 @@ ul {
     }
     
     &__btn{
-        padding: 40px 20px;
+        padding: 25px 20px;
         min-width: 6rem;
         margin-right: 2rem;
         border-radius: 1.3rem;
@@ -247,7 +279,6 @@ ul {
         color: $gristexto;
         position: relative;
         overflow: hidden;
-        background-color: blueviolet;
 
         &.active{
             .tabs__overflow{
@@ -263,13 +294,12 @@ ul {
     &__overflow{
         width: 100%;
         height: 100%;
-        // background-color: orange;
         position: absolute;
         top: calc(50% - 33px);
         left:-100%;
-        z-index: 1;
         opacity: 0;
         transition: all .5s ease;
+        background-color: $negro;
         // background-image: url(img/html_sm.png);
         // background-position: center;
         // background-size:cover;
@@ -286,7 +316,7 @@ ul {
     }
     &__seccion{
         max-width: 85rem;
-        min-height: 35rem;
+        min-height: 30rem;
         position: absolute;
         top:0;
 
@@ -314,4 +344,31 @@ ul {
         writing-mode: vertical-lr;
         margin-right: 5rem;
         }
+}
+.contacto{
+    margin: 0 auto 15rem;
+
+    &__h3{
+        font-family: 'MarkPro';
+        font-size: 3rem;
+        letter-spacing: -.04em;
+        animation: gradient 30s ease infinite;
+        background: linear-gradient(90deg,#b0f3f1,#ffcfdf);
+        background-size: 400%;
+        -webkit-background-clip: text;
+                background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 2rem;
+        &:nth-child(2){
+            font-size: 1.5rem;
+        }
+    }
+    @keyframes gradient {
+        0% { background-position: 0 50% }
+        50% { background-position: 100% 50% }
+        100% { background-position: 0 50% }
+    }
+    &__p{
+        margin-bottom: 4rem;
+    }
 }
