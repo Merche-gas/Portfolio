@@ -21,7 +21,7 @@
         border: 0.2rem solid #2a2b37;
         backdrop-filter: blur(95px);
         border-radius: 2rem;
-        z-index: 1;
+        z-index: 2;
         
     }
     &__flex{
@@ -42,7 +42,8 @@
         }
     }
     &__flex.hover:hover{
-        transform: scale(95%) translateX(1.5rem); 
+        transform:  scale(95%) translateX(1rem); 
+        
     }
     &__span{
         display: block;
@@ -82,12 +83,12 @@
         &.active{
             &::before{
                 width: 100%;
-                top: calc(50% - 1.5px);
+                top: calc(50% - .25px);
                 transform: rotate(45deg);
             }
             &::after{
                 width: 100%;
-                top: calc(50% - 1.5px);
+                top: calc(50% - .25px);
                 transform: rotate(-45deg);
             }
             .menu__linea{
@@ -99,7 +100,7 @@
         content: "";
         display: block;
         width: 100%;
-        height: 1px;
+        height: .5px;
         background-color: $gristexto;
         position: absolute;
         top: 0;
@@ -108,25 +109,177 @@
     
     &__linea{
         width: 80%;
-        height: 1px;
+        height: .5px;
         background-color: $gristexto;
         position: absolute;
-        top: calc(50% - 0.5px);
+        top: calc(50% - 0.25px);
         transition: all 0.5s ease;
     }
     &__button::after{
-        content: "";
+        content:"";
         display: block;
         width: 60%;
-        height: 1px;
+        height: .5px;
         background-color: $gristexto;
         position: absolute;
         bottom: 0;
         transition: all 0.5s ease;
     }
 }
-/* Header*/
+/* Menu Móvil*/
+.menuMovil{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+    background-color: $negro;
+    color: $gristexto;
+    z-index: 1;
+    opacity: 0;
+    transition: all 1s ease;
+    overflow-y: scroll;
 
+    &.active{
+        opacity: 1;
+        left:0;
+        .menuMovil__arriba, .menuMovil__abajo{
+            opacity: 1;
+        }
+
+    }
+    &__wrapper{
+        width: 95%;
+        margin: auto;
+    }
+    &__arriba{
+        margin-top: 15rem;
+        display: flex;
+        
+        justify-content: space-around;
+        align-items: flex-end;
+        width: 90%;
+        margin-left: auto;
+        text-align: center;
+        margin-right: auto;
+        opacity: 0;
+        transition: all 1.2s ease;
+        transition-delay: 1s;
+
+        @include tablet{
+            flex-wrap: wrap;
+
+            .menuMovil__izda{
+                justify-content: center;
+                margin: 0 auto 0;
+            }
+            .menuMovil__dcha{
+                justify-content: center;
+                margin: 5rem auto 0;
+            }
+        }
+    }
+    &__a{
+        font-size: 2.5rem;
+        margin-top: 2rem;
+        display: inline-block;
+        font-family: 'MarkPro Bold';
+        text-decoration: none;
+        color: $gristexto;
+        transition: all .3s ease-in-out;
+        &:hover{
+            color: $rosa;
+        }
+    }
+    .fa-linkedin{
+        margin-left: 1.5rem;
+    }
+    &__abajo{
+        margin: 6rem auto 6rem;
+        opacity: 0;
+        transition: all 1.2s ease;
+        transition-delay: 1.5s;
+    }
+    &__h3{
+        margin: 8rem auto 8rem;
+        text-align: center;
+        font-size: 3rem;
+    }
+    &__proyectos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+    &__proyecto{
+        width: 25rem;
+        height: 25rem;
+        border-radius: 4.5rem;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-decoration: none;
+        position: relative;
+        transition: all .5s ease;
+        flex-basis: 35%;
+        @include tablet{
+            flex-basis: 51%;
+        }
+        &:hover{
+            transform: scale(105%);
+            .overflow{
+                opacity: .9;
+                &__h3{
+                    opacity: 1;
+                }
+            }
+
+        }
+        .overflow{
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            position: absolute;
+            top: 0;
+            left:0;
+            opacity:0;
+            display: flex;
+            align-items: center;
+            border-radius: 4.5rem;
+            transition: all .5s ease;
+            &__h3{
+                position: absolute;
+                //hereda posición de flex XD
+                font-family: 'MarkPro Bold';
+                font-size: 5rem;
+                animation: gradient 30s ease infinite;
+                background: linear-gradient(-45deg, #6bc5f8, #cf59e6, #6bc5f8, #cf59e6);
+                background-size: 400%;
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                opacity: 0;
+                transition: all .5s ease;
+                @include minitablet{
+                    font-size: 4rem;
+                }
+            }
+        }
+        
+    }
+    &__img{
+        border-radius: 4.5rem;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: all .3s ease-in-out;
+    }
+}
+/* Header*/
 .header{
     background-color: $negro;
     position: relative;
@@ -135,14 +288,18 @@
         content: "";
         display: block;
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 20rem;
-        height: 20rem;
+        top: 50%;
+        left: 75%;
+        width: 15rem;
+        height: 15rem;
         z-index: 1;
         background-repeat: no-repeat;
         background-size: contain;
-        // background-image: url('img/sticker.png');
+        background-image: url('img/merche.webp');
+        @include tablet{
+            width: 10rem;
+            height: 10rem;
+        }
     }
     &__wrapper{
         width: 95%;
@@ -160,6 +317,16 @@
         line-height: 100%;
         font-weight: 900;
         color: white;
+        
+        @include tablet {
+            font-size: 6.5rem;
+        }
+        @include minitablet {
+            font-size: 5rem;
+        }
+        @include movil {
+            font-size: 3.8rem;
+        }
 
         &.animado{
             animation: gradient 30s ease infinite;
@@ -202,14 +369,21 @@
 }
 .media{
     background-color: $negro;
+    @include minitablet {
+            &__left{
+                display: none;
+            }
+    }
     &__wrapper{
         width: 95%;
         max-width: 85rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
         margin: auto;
         padding: 8rem 0;
+        
     }
     audio{
         background-color: black;

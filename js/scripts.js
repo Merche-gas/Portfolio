@@ -3,6 +3,7 @@ console.log('hola mundo')
 // Menu 
 const menu   = document.querySelector('.hover')
 const burger = document.querySelector('.menu__button')
+const menuMovil = document.querySelector('.menuMovil')
 
 console.log(burger)
 
@@ -10,6 +11,7 @@ menu.addEventListener('click', ()=>{
 
     burger.classList.toggle('active')
     menu.classList.toggle('active')
+    menuMovil.classList.toggle('active')
 
 })
 
@@ -50,30 +52,29 @@ window.addEventListener('scroll', ()=>{
     let { offsetTop : offsetContenedor ,
           classList : classListContenedor } = contenedor
     
-    
     let distTrabajar    = trabajoDuro.offsetTop
     let distProyectosP  = proyectosP.offsetTop
     let distTabs        = tabs.offsetTop
     let distContacto    = contacto.offsetTop
     
 
-    scrollY >= ( offsetContenedor - (innerHeight)) 
+    scrollY >= ( offsetContenedor - (innerHeight/1.1)) 
     ? classListContenedor.add('active')
     : classListContenedor.remove('active')
     
-    scrollY >= ( distTrabajar - (innerHeight)) 
+    scrollY >= ( distTrabajar - (innerHeight/1.1)) 
     ? trabajoDuro.classList.add('active')
     : trabajoDuro.classList.remove('active')
 
-    scrollY >= ( distProyectosP - (innerHeight)) 
+    scrollY >= ( distProyectosP - (innerHeight/1.1)) 
     ? proyectosP.classList.add('active')
     : proyectosP.classList.remove('active')
 
-    scrollY >= ( distTabs - (innerHeight)) 
+    scrollY >= ( distTabs - (innerHeight/1.1)) 
     ? tabs.classList.add('active')
     : tabs.classList.remove('active')
 
-    scrollY >= ( distContacto - (innerHeight)) 
+    scrollY >= ( distContacto - (innerHeight/1.1)) 
     ? contacto.classList.add('active')
     : contacto.classList.remove('active')
 
@@ -82,11 +83,11 @@ window.addEventListener('scroll', ()=>{
 tarjetas.forEach((cadaTarjeta, i)=>{
     window.addEventListener('scroll', ()=>{
         let {innerHeight , scrollY} = window
-        let altoWindow      = window.innerHeight
-        let pixel           = window.scrollY
+        // let altoWindow      = window.innerHeight
+        // let pixel           = window.scrollY
         let distTarjetas    = tarjetas[i].offsetTop
 
-        scrollY >= ( distTarjetas - (innerHeight)) 
+        scrollY >= ( distTarjetas - (innerHeight/1.2)) 
         ? tarjetas[i].classList.add('active')
         : tarjetas[i].classList.remove('active')
     })

@@ -1,6 +1,13 @@
+@charset "UTF-8";
 @font-face {
   font-family: "MarkPro";
   src: url("fuentes/MarkPro-Heavy.woff") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "MarkPro Bold";
+  src: url("fuentes/Mark-Pro-Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: bold;
 }
@@ -57,6 +64,12 @@
   font-style: normal;
   font-weight: bold;
 }
+@font-face {
+  font-family: "MarkPro Bold";
+  src: url("fuentes/Mark-Pro-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
 /* Menu*/
 .menu {
   background-color: #10101a;
@@ -86,7 +99,7 @@
   -webkit-backdrop-filter: blur(95px);
           backdrop-filter: blur(95px);
   border-radius: 2rem;
-  z-index: 1;
+  z-index: 2;
 }
 .menu__flex {
   display: -webkit-box;
@@ -109,8 +122,8 @@
   display: none;
 }
 .menu__flex.hover:hover {
-  -webkit-transform: scale(95%) translateX(1.5rem);
-          transform: scale(95%) translateX(1.5rem);
+  -webkit-transform: scale(95%) translateX(1rem);
+          transform: scale(95%) translateX(1rem);
 }
 .menu__span {
   display: block;
@@ -160,13 +173,13 @@
 }
 .menu__button.active::before {
   width: 100%;
-  top: calc(50% - 1.5px);
+  top: calc(50% - 0.25px);
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 .menu__button.active::after {
   width: 100%;
-  top: calc(50% - 1.5px);
+  top: calc(50% - 0.25px);
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
@@ -177,7 +190,7 @@
   content: "";
   display: block;
   width: 100%;
-  height: 1px;
+  height: 0.5px;
   background-color: #c4c4c4;
   position: absolute;
   top: 0;
@@ -186,10 +199,10 @@
 }
 .menu__linea {
   width: 80%;
-  height: 1px;
+  height: 0.5px;
   background-color: #c4c4c4;
   position: absolute;
-  top: calc(50% - 0.5px);
+  top: calc(50% - 0.25px);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -197,12 +210,204 @@
   content: "";
   display: block;
   width: 60%;
-  height: 1px;
+  height: 0.5px;
   background-color: #c4c4c4;
   position: absolute;
   bottom: 0;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+/* Menu Móvil*/
+.menuMovil {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  background-color: #10101a;
+  color: #c4c4c4;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  overflow-y: scroll;
+}
+.menuMovil.active {
+  opacity: 1;
+  left: 0;
+}
+.menuMovil.active .menuMovil__arriba, .menuMovil.active .menuMovil__abajo {
+  opacity: 1;
+}
+.menuMovil__wrapper {
+  width: 95%;
+  margin: auto;
+}
+.menuMovil__arriba {
+  margin-top: 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 90%;
+  margin-left: auto;
+  text-align: center;
+  margin-right: auto;
+  opacity: 0;
+  -webkit-transition: all 1.2s ease;
+  transition: all 1.2s ease;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+@media (max-width: 820px) {
+  .menuMovil__arriba {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .menuMovil__arriba .menuMovil__izda {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto 0;
+  }
+  .menuMovil__arriba .menuMovil__dcha {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 5rem auto 0;
+  }
+}
+.menuMovil__a {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  display: inline-block;
+  font-family: "MarkPro Bold";
+  text-decoration: none;
+  color: #c4c4c4;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.menuMovil__a:hover {
+  color: #cf59e6;
+}
+.menuMovil .fa-linkedin {
+  margin-left: 1.5rem;
+}
+.menuMovil__abajo {
+  margin: 6rem auto 6rem;
+  opacity: 0;
+  -webkit-transition: all 1.2s ease;
+  transition: all 1.2s ease;
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+}
+.menuMovil__h3 {
+  margin: 8rem auto 8rem;
+  text-align: center;
+  font-size: 3rem;
+}
+.menuMovil__proyectos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+}
+.menuMovil__proyecto {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 4.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+}
+@media (max-width: 820px) {
+  .menuMovil__proyecto {
+    -ms-flex-preferred-size: 51%;
+        flex-basis: 51%;
+  }
+}
+.menuMovil__proyecto:hover {
+  -webkit-transform: scale(105%);
+          transform: scale(105%);
+}
+.menuMovil__proyecto:hover .overflow {
+  opacity: 0.9;
+}
+.menuMovil__proyecto:hover .overflow__h3 {
+  opacity: 1;
+}
+.menuMovil__proyecto .overflow {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4.5rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.menuMovil__proyecto .overflow__h3 {
+  position: absolute;
+  font-family: "MarkPro Bold";
+  font-size: 5rem;
+  -webkit-animation: gradient 30s ease infinite;
+          animation: gradient 30s ease infinite;
+  background: linear-gradient(-45deg, #6bc5f8, #cf59e6, #6bc5f8, #cf59e6);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+@media (max-width: 600px) {
+  .menuMovil__proyecto .overflow__h3 {
+    font-size: 4rem;
+  }
+}
+.menuMovil__img {
+  border-radius: 4.5rem;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Header*/
@@ -215,13 +420,20 @@
   content: "";
   display: block;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 20rem;
-  height: 20rem;
+  top: 50%;
+  left: 75%;
+  width: 15rem;
+  height: 15rem;
   z-index: 1;
   background-repeat: no-repeat;
   background-size: contain;
+  background-image: url("img/merche.webp");
+}
+@media (max-width: 820px) {
+  .header::before {
+    width: 10rem;
+    height: 10rem;
+  }
 }
 .header__wrapper {
   width: 95%;
@@ -239,6 +451,21 @@
   line-height: 100%;
   font-weight: 900;
   color: white;
+}
+@media (max-width: 820px) {
+  .header__span {
+    font-size: 6.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .header__span {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 420px) {
+  .header__span {
+    font-size: 3.8rem;
+  }
 }
 .header__span.animado {
   -webkit-animation: gradient 30s ease infinite;
@@ -300,6 +527,11 @@
 .media {
   background-color: #10101a;
 }
+@media (max-width: 600px) {
+  .media__left {
+    display: none;
+  }
+}
 .media__wrapper {
   width: 95%;
   max-width: 85rem;
@@ -312,6 +544,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: auto;
   padding: 8rem 0;
 }
@@ -337,6 +571,12 @@
 @font-face {
   font-family: "MarkPro";
   src: url("fuentes/MarkPro-Heavy.woff") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "MarkPro Bold";
+  src: url("fuentes/Mark-Pro-Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: bold;
 }
@@ -403,10 +643,15 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   pointer-events: none;
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
+}
+@media (max-width: 820px) {
+  .mouse {
+    display: none;
+  }
 }
 .mouse img {
   width: 100%;
@@ -454,7 +699,12 @@ ul {
 }
 
 .proyectos {
-  margin-top: 15rem;
+  padding-top: 15rem;
+}
+@media (max-width: 600px) {
+  .proyectos {
+    padding-top: 10rem;
+  }
 }
 .proyectos__h1 {
   font-family: "MarkPro";
@@ -464,6 +714,11 @@ ul {
           transform: translateX(10%) translateY(10%);
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
+}
+@media (max-width: 420px) {
+  .proyectos__h1 {
+    font-size: 3.5rem;
+  }
 }
 .proyectos__h1.animado {
   -webkit-animation: gradient 30s ease infinite;
@@ -500,6 +755,11 @@ ul {
 .proyectos__p.active {
   -webkit-transform: translateX(0%) translateY(0%);
           transform: translateX(0%) translateY(0%);
+}
+@media (max-width: 420px) {
+  .proyectos__p {
+    margin: 2rem 0 10rem;
+  }
 }
 .proyectos .proyectos__centro {
   width: 35rem;
@@ -541,6 +801,12 @@ ul {
   -webkit-transform: translateX(0%) translateY(0%);
           transform: translateX(0%) translateY(0%);
 }
+@media (max-width: 420px) {
+  .proyectos__tarjeta {
+    padding: 4rem;
+    margin: 8rem auto;
+  }
+}
 .proyectos__tarjeta.fantic .proyectos__centro {
   background-image: url(img/fantic_s.png);
 }
@@ -559,6 +825,11 @@ ul {
   line-height: 105%;
   -webkit-animation: gradient 3s infinite;
   animation: gradient 3s infinite;
+}
+@media (max-width: 600px) {
+  .proyectos__tarjeta.fantic .proyectos__h2 {
+    margin-top: 3rem;
+  }
 }
 .proyectos__tarjeta.apple .proyectos__centro {
   background-image: url(img/apple.png);
@@ -579,6 +850,11 @@ ul {
   -webkit-animation: gradient 3s infinite;
   animation: gradient 3s infinite;
 }
+@media (max-width: 600px) {
+  .proyectos__tarjeta.apple .proyectos__h2 {
+    margin-top: 3rem;
+  }
+}
 .proyectos__tarjeta.pixar .proyectos__centro {
   background-image: url(img/pixar.png);
 }
@@ -598,6 +874,11 @@ ul {
   -webkit-animation: gradient 3s infinite;
   animation: gradient 3s infinite;
 }
+@media (max-width: 600px) {
+  .proyectos__tarjeta.pixar .proyectos__h2 {
+    margin-top: 3rem;
+  }
+}
 .proyectos__tarjeta.restaurante .proyectos__centro {
   background-image: url(img/restaurante.png);
 }
@@ -616,6 +897,11 @@ ul {
   line-height: 105%;
   -webkit-animation: gradient 3s infinite;
   animation: gradient 3s infinite;
+}
+@media (max-width: 600px) {
+  .proyectos__tarjeta.restaurante .proyectos__h2 {
+    margin-top: 3rem;
+  }
 }
 .proyectos__overflow {
   width: 0%;
@@ -658,6 +944,11 @@ ul {
           writing-mode: vertical-lr;
   margin-right: 5rem;
 }
+@media (max-width: 600px) {
+  .proyectos__izda p {
+    display: none;
+  }
+}
 .proyectos__dcha {
   margin-left: 5rem;
 }
@@ -667,13 +958,17 @@ ul {
 }
 .proyectos__a {
   color: #c4c4c4;
-  margin-top: 10rem;
+  margin: 10rem 0 5rem;
   display: inline-block;
   font-size: 1.6rem;
   letter-spacing: 0.14em;
   position: relative;
-  margin-bottom: 5rem;
   cursor: pointer;
+}
+@media (max-width: 600px) {
+  .proyectos__a {
+    margin: 3rem 0 2rem;
+  }
 }
 .proyectos__a::after {
   content: "";
@@ -701,6 +996,11 @@ ul {
 .tabs.active {
   -webkit-transform: translateX(0%) translateY(0%);
           transform: translateX(0%) translateY(0%);
+}
+@media (max-width: 600px) {
+  .tabs {
+    margin-bottom: 35rem;
+  }
 }
 .tabs__ul {
   display: -webkit-box;
@@ -774,6 +1074,11 @@ ul {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+@media (max-width: 600px) {
+  .tabs__seccion {
+    padding: 2rem;
+  }
+}
 .tabs__seccion.active {
   opacity: 1;
 }
@@ -786,6 +1091,11 @@ ul {
   writing-mode: vertical-lr;
   margin-right: 5rem;
 }
+@media (max-width: 420px) {
+  .tabs__h2 {
+    margin-right: 3rem;
+  }
+}
 
 .contacto {
   margin: 0 auto 15rem;
@@ -793,6 +1103,11 @@ ul {
           transform: translateX(10%) translateY(10%);
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
+}
+@media (max-width: 600px) {
+  .contacto {
+    margin: 0 auto 8rem;
+  }
 }
 .contacto.active {
   -webkit-transform: translateX(0%) translateY(0%);

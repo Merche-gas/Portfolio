@@ -5,6 +5,7 @@ $rosita: #b772ea;
 $verde: #0c3929;
 $verdeclaro:#6b9796;
 $negro: #10101a;
+$rosa: #cf59e6;
 
 @font-face {
     font-family: 'MarkPro';
@@ -12,24 +13,32 @@ $negro: #10101a;
     font-style: normal;
     font-weight: bold;
 }
-
-@mixin wide {
-    @media (max-width: 1500px) {@content;}
+@font-face {
+    font-family: 'MarkPro Bold';
+    src: url('fuentes/Mark-Pro-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: bold;
 }
-@mixin laptop {
-    @media (max-width: 1280px) {@content;}
-}
-@mixin minilaptop {
-    @media (max-width: 1050px) {@content;}
-}
+// @mixin wide {
+//     @media (max-width: 1500px) {@content;}
+// }
+// @mixin laptop {
+//     @media (max-width: 1280px) {@content;}
+// }
+// @mixin minilaptop {
+//     @media (max-width: 1050px) {@content;}
+// }
 @mixin tablet {
     @media (max-width: 820px) {@content;}
 }
-@mixin movil {
+@mixin minitablet {
     @media (max-width: 600px) {@content;}
 }
-@mixin minimovil {
-    @media (max-width: 450px) {@content;}
+@mixin movil {
+    @media (max-width: 420px) {@content;}
 }
+// @mixin minimovil {
+//     @media (max-width: 450px) {@content;}
+// }
 
 

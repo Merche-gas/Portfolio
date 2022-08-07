@@ -114,7 +114,7 @@
             <div class="tabs__contenedor">
                 <section class="tabs__seccion active">
                     <h2 class="tabs__h2">HTML</h2>
-                    <p class="tabs__p">Cuando comencé a estudiar HTML, float me pareció difícil de usar por primera vez, pero cuando nos enseñaron flex y grid, ¡la cosa cambió! Para mi fue como magia y una vez que llevas unos meses practicando, puedes hacer webs bastante guapas. <br> 
+                    <p class="tabs__p">Cuando comencé a estudiar HTML, float me pareció difícil de usar por primera vez, pero cuando nos enseñaron flex y grid, ¡la cosa cambió! Para mi fue como magia y una vez que llevas unos meses practicando, puedes hacer cosas realmente sorprendentes. <br> 
                     </p>
                     
                 </section>
@@ -136,7 +136,7 @@
 
                 <section class="tabs__seccion">
                     <h2 class="tabs__h2">jQuery</h2>
-                    <p class="tabs__p">Una vez visto JS, jQuery me parece un paseo por el campo un día de primavera. Sin mochila. Me encanta utilizarlo, ¡es tan corto y tan limpio!</p>
+                    <p class="tabs__p">Una vez que terminamos JS, jQuery me pareció un paseo por el campo. Me encanta usarlo, ¡es tan corto y tan limpio!</p>
                 </section>
             </div>
         </div>
