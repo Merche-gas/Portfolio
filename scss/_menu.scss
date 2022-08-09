@@ -133,28 +133,28 @@
     left: -100%;
     width: 100%;
     overflow: hidden;
-    height: 100vh;
+    height: 100%;
     background-color: $negro;
     color: $gristexto;
     z-index: 1;
     opacity: 0;
     transition: all 1s ease;
-    overflow-y: scroll;
+    overflow-y: hidden;
+    padding-top: 5rem;
 
     &.active{
         opacity: 1;
         left:0;
-        .menuMovil__arriba, .menuMovil__abajo{
+        .menuMovil__div, .menuMovil__div{
             opacity: 1;
         }
-
     }
     &__wrapper{
         width: 95%;
         margin: auto;
     }
-    &__arriba{
-        margin-top: 15rem;
+    &__div{
+        margin-top: 10rem;
         display: flex;
         
         justify-content: space-around;
@@ -173,10 +173,12 @@
             .menuMovil__izda{
                 justify-content: center;
                 margin: 0 auto 0;
+                flex-basis: 51%;
             }
             .menuMovil__dcha{
                 justify-content: center;
                 margin: 5rem auto 0;
+                flex-basis: 51%;
             }
         }
     }
@@ -382,7 +384,7 @@
         align-items: center;
         flex-wrap: wrap;
         margin: auto;
-        padding: 8rem 0;
+        padding: 8rem 0 0;
         
     }
     audio{

@@ -59,13 +59,34 @@ ul {
     max-width: 85rem;
     margin: auto;
     color: $gristexto;
-    &__p{
+
+    &__about{
+        padding-top: 15rem;
         transform: translateX(10%) translateY(10%);
         transition: all 1s ease;
         &.active{
             transform: translateX(0%) translateY(0%);
         }
     }
+    &__h3{
+        font-family: 'MarkPro';
+        font-size: 3rem;
+        letter-spacing: -.04em;
+        animation: gradient 30s ease infinite;
+        background: linear-gradient(-45deg,#6bc5f8,#cf59e6,#6bc5f8,#cf59e6);
+        background-size: 400%;
+        -webkit-background-clip: text;
+                background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 2rem;
+    
+    }
+    @keyframes gradient {
+        0% { background-position: 0 50% }
+        50% { background-position: 100% 50% }
+        100% { background-position: 0 50% }
+    }
+    
 }
 .proyectos{
    padding-top: 12rem;
@@ -461,5 +482,8 @@ ul {
     }
     &__a{
         color: $gristexto;
+        &:hover{
+            color: $rosa
+        }
     }
 }

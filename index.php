@@ -11,9 +11,11 @@
     <?php include "componentes/menu.html"; ?>
 
     <main class = "contenedor" >
-        
-        <p class="contenedor__p">¡Hola! 🖖 Me llamo <strong>Merche</strong>  y soy <strong>desarrolladora web front end.</strong>  <br> Me apasiona crear webs que ayuden a la gente en su día a día. He llegado <br> hace poco al mundo del desarrollo web y he descubierto que me encanta. <br> Estoy en proceso de convertirme en desarrolladora web full stack y <br> disfruto mucho de cada nuevo aprendizaje 😋 </p>
-        
+        <section class="contenedor__about" id="about">
+            <h3 class="contenedor__h3" >Sobre mi</h3>
+            <p class="contenedor__p" >¡Hola! 🖖 Me llamo <strong>Merche</strong>  y soy <strong>desarrolladora web front end.</strong>  <br> Me apasiona crear webs que ayuden a la gente en su día a día. He llegado <br> hace poco al mundo del desarrollo web y he descubierto que me encanta. <br> Estoy en proceso de convertirme en desarrolladora web full stack y <br> disfruto mucho de cada nuevo aprendizaje 😋 </p>
+        </section>
+                
         <section class="proyectos" id="seccionProyectos">
             <h1 class="proyectos__h1 animado">Sip, he trabajado muy duro. </h1>
             <p class="proyectos__p">En cada proyecto he puesto todo mi esfuerzo. </p>
@@ -143,7 +145,7 @@
         </div>
         <section class="contacto">
             <h3 class="contacto__h3">Contacto</h3>
-            <p class="contacto__p">Gracias por llegar hasta aquí. Espero que mi portfolio te haya gustado. Si quieres contactar conmigo puedes enviarme un <a href="mailto:merchegas75@gmail.com" target="blank" rel="noopener noreferrer" class="contacto__a"> ✉️ a merchegas75@gmail.com</a>  y hablamos.</p>
+            <p class="contacto__p">Gracias por llegar hasta aquí. Espero que mi portfolio te haya gustado. Si quieres contactar conmigo puedes enviarme un ✉️ a <a href="mailto:merchegas75@gmail.com" target="blank" rel="noopener noreferrer" class="contacto__a"> merchegas75@gmail.com</a>  y hablamos.</p>
 
             <h3 class="contacto__h3">Redes Sociales</h3>
             <div class="media__right">

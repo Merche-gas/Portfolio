@@ -15,6 +15,17 @@ menu.addEventListener('click', ()=>{
 
 })
 
+const aMenu = document.querySelectorAll('.menuMovil__a')
+
+aMenu.forEach((cadaA, i) =>{
+    aMenu[i].addEventListener('click',() =>{
+        burger.classList.remove('active')
+        menu.classList.remove('active')
+        menuMovil.classList.remove('active')
+    })
+})
+
+
 //Tabs
 
 const botones = document.querySelectorAll('.tabs__btn')
@@ -38,7 +49,7 @@ botones.forEach((cadaBtn, i)=>{
 
 // Scroll<
 
-const contenedor  = document.querySelector('.contenedor__p')
+const contenedor  = document.querySelector('.contenedor__about')
 const trabajoDuro = document.querySelector('.proyectos__h1')
 const proyectosP  = document.querySelector('.proyectos__p')
 const tarjetas    = document.querySelectorAll('.proyectos__tarjeta')
