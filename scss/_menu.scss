@@ -113,7 +113,7 @@
         background-color: $gristexto;
         position: absolute;
         top: calc(50% - 0.25px);
-        transition: all 0.5s ease;
+        transition: all 5s ease;
     }
     &__button::after{
         content:"";
@@ -311,7 +311,7 @@
         margin-left: 3rem;
     }
     &__span{
-        font-size: 9rem;
+        font-size: 8rem;
         font-family: 'MarkPro';
         letter-spacing: -.03em;
         line-height: 100%;

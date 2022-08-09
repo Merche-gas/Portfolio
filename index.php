@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>  
     <?php include "componentes/head.html"; ?>
 <title>Portfolio</title>
 </head>
 <body>
     <div class="mouse rotar">
-        <img src="img/mouse.png" alt="raton">
+        <img src="img/mouse.png" alt="raton" loading="lazy">
     </div>
     <?php include "componentes/menu.html"; ?>
 
     <main class = "contenedor" >
         
-        <p class="contenedor__p">¡Hola! 🖖 Me llamo Merche y soy desarrolladora web front end. <br> Me apasiona crear webs que ayuden a la gente en su día a día.</p>
+        <p class="contenedor__p">¡Hola! 🖖 Me llamo <strong>Merche</strong>  y soy <strong>desarrolladora web front end.</strong>  <br> Me apasiona crear webs que ayuden a la gente en su día a día. He llegado <br> hace poco al mundo del desarrollo web y he descubierto que me encanta. <br> Estoy en proceso de convertirme en desarrolladora web full stack y <br> disfruto mucho de cada nuevo aprendizaje 😋 </p>
+        
         <section class="proyectos" id="seccionProyectos">
             <h1 class="proyectos__h1 animado">Sip, he trabajado muy duro. </h1>
             <p class="proyectos__p">En cada proyecto he puesto todo mi esfuerzo. </p>
@@ -77,37 +78,37 @@
             <ul class="tabs__ul">
                 <li class="tabs__li">
                     <button class="tabs__btn active">HTML
-                        <div class="tabs__overflow">
-                            <img src="img/html.png" alt="">
-                        </div>
+                        <span class="tabs__overflow">
+                            <img src="img/html.png" alt="logo html" loading="lazy">
+                        </span>
                     </button>
                 </li>
                 <li class="tabs__li">
                     <button class="tabs__btn">CSS
-                        <div class="tabs__overflow">
-                            <img src="img/css.png" alt="">
-                        </div>
+                        <span class="tabs__overflow">
+                            <img src="img/css.png" alt="logo css" loading="lazy">
+                        </span>
                     </button>
                 </li>
                 <li class="tabs__li">
                     <button class="tabs__btn">Sass
-                        <div class="tabs__overflow">
-                            <img src="img/sass.png" alt="">
-                        </div>
+                        <span class="tabs__overflow">
+                            <img src="img/sass.png" alt="logo sass" loading="lazy">
+                        </span>
                     </button>
                 </li>
                 <li class="tabs__li">
                     <button class="tabs__btn">JS
-                        <div class="tabs__overflow">
-                            <img src="img/js.png" alt="">
-                        </div>
+                        <span class="tabs__overflow">
+                            <img src="img/js.png" alt="logo javascript" loading="lazy">
+                        <span>
                     </button>
                 </li>
                 <li class="tabs__li">
                     <button class="tabs__btn">jQuery
-                        <div class="tabs__overflow">
-                            <img src="img/jQ.png" alt="">
-                        </div>
+                        <span class="tabs__overflow">
+                            <img src="img/jQ.png" alt="logo jquery" loading="lazy">
+                        </span>
                     </button>
                 </li>
             </ul>
@@ -142,12 +143,12 @@
         </div>
         <section class="contacto">
             <h3 class="contacto__h3">Contacto</h3>
-            <p class="contacto__p">Gracias por llegar hasta aquí. Espero que mi portfolio te haya gustado. Si quieres contactar conmigo puedes enviarme un <a href="mailto:merchegas75@gmail.com" target="blank" class="contacto__a"> ✉️ </a>  y hablamos.</p>
+            <p class="contacto__p">Gracias por llegar hasta aquí. Espero que mi portfolio te haya gustado. Si quieres contactar conmigo puedes enviarme un <a href="mailto:merchegas75@gmail.com" target="blank" rel="noopener noreferrer" class="contacto__a"> ✉️ a merchegas75@gmail.com</a>  y hablamos.</p>
 
-            <h3 class="contacto__h3">También estoy en:</h3>
+            <h3 class="contacto__h3">Redes Sociales</h3>
             <div class="media__right">
-                <a href="https://github.com/Merche-gas" target ="_blank" class="media__a"><i class="fa-brands fa-github"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/mercedes-gasca-3804296b/" target="_blank" class="media__a"> <i class="fa-brands fa-linkedin"></i> Linkedin</a>
+                <a href="https://github.com/Merche-gas" target ="_blank" rel="noopener noreferrer" class="media__a"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/mercedes-gasca-3804296b/" target="_blank" rel="noopener noreferrer" class="media__a"> <i class="fa-brands fa-linkedin"></i> Linkedin</a>
             </div>
         </section>
 

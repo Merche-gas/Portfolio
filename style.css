@@ -203,8 +203,8 @@
   background-color: #c4c4c4;
   position: absolute;
   top: calc(50% - 0.25px);
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 5s ease;
+  transition: all 5s ease;
 }
 .menu__button::after {
   content: "";
@@ -445,7 +445,7 @@
   margin-left: 3rem;
 }
 .header__span {
-  font-size: 9rem;
+  font-size: 8rem;
   font-family: "MarkPro";
   letter-spacing: -0.03em;
   line-height: 100%;
@@ -699,7 +699,7 @@ ul {
 }
 
 .proyectos {
-  padding-top: 15rem;
+  padding-top: 12rem;
 }
 @media (max-width: 600px) {
   .proyectos {
@@ -723,8 +723,7 @@ ul {
 .proyectos__h1.animado {
   -webkit-animation: gradient 30s ease infinite;
           animation: gradient 30s ease infinite;
-  background: -webkit-gradient(linear, left top, right top, from(#b0f3f1), to(#ffcfdf));
-  background: linear-gradient(90deg, #b0f3f1, #ffcfdf);
+  background: linear-gradient(-45deg, #6bc5f8, #cf59e6, #6bc5f8, #cf59e6);
   background-size: 400%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -770,7 +769,7 @@ ul {
   overflow: hidden;
   cursor: pointer;
   background-position: center;
-  background-image: url(img/back01.png);
+  background-image: url(img/back01.jpg);
 }
 .proyectos__tarjeta {
   width: 95%;
@@ -808,7 +807,7 @@ ul {
   }
 }
 .proyectos__tarjeta.fantic .proyectos__centro {
-  background-image: url(img/fantic_s.png);
+  background-image: url(img/fantic2.webp);
 }
 .proyectos__tarjeta.fantic .proyectos__overflow {
   background-image: linear-gradient(-225deg, #DCDEDE 0%, #8698AB 50%, #50564C 100%);
@@ -832,7 +831,7 @@ ul {
   }
 }
 .proyectos__tarjeta.apple .proyectos__centro {
-  background-image: url(img/apple.png);
+  background-image: url(img/apple2.webp);
 }
 .proyectos__tarjeta.apple .proyectos__overflow {
   background-image: linear-gradient(-225deg, #507059 0%, #4FF0AD 100%);
@@ -856,7 +855,7 @@ ul {
   }
 }
 .proyectos__tarjeta.pixar .proyectos__centro {
-  background-image: url(img/pixar.png);
+  background-image: url(img/pixar2.webp);
 }
 .proyectos__tarjeta.pixar .proyectos__overflow {
   background-image: linear-gradient(-225deg, #96B4B6 0%, #F26A33 50%, #B75760 100%);
@@ -880,7 +879,7 @@ ul {
   }
 }
 .proyectos__tarjeta.restaurante .proyectos__centro {
-  background-image: url(img/restaurante.png);
+  background-image: url(img/restaurante2.webp);
 }
 .proyectos__tarjeta.restaurante .proyectos__overflow {
   background-image: linear-gradient(-225deg, #c84e36 0%, #c0803c 50%, #e2b63d 100%);
@@ -1098,7 +1097,7 @@ ul {
 }
 
 .contacto {
-  margin: 0 auto 15rem;
+  margin: 0 auto 12rem;
   -webkit-transform: translateX(10%) translateY(10%);
           transform: translateX(10%) translateY(10%);
   -webkit-transition: all 1s ease;
@@ -1119,8 +1118,7 @@ ul {
   letter-spacing: -0.04em;
   -webkit-animation: gradient 30s ease infinite;
           animation: gradient 30s ease infinite;
-  background: -webkit-gradient(linear, left top, right top, from(#b0f3f1), to(#ffcfdf));
-  background: linear-gradient(90deg, #b0f3f1, #ffcfdf);
+  background: linear-gradient(-45deg, #6bc5f8, #cf59e6, #6bc5f8, #cf59e6);
   background-size: 400%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -1143,4 +1141,7 @@ ul {
 }
 .contacto__p {
   margin-bottom: 4rem;
+}
+.contacto__a {
+  color: #c4c4c4;
 }
