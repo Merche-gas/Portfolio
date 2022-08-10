@@ -50,6 +50,7 @@ botones.forEach((cadaBtn, i)=>{
 // Scroll<
 
 const contenedor  = document.querySelector('.contenedor__about')
+console.log(contenedor)
 const trabajoDuro = document.querySelector('.proyectos__h1')
 const proyectosP  = document.querySelector('.proyectos__p')
 const tarjetas    = document.querySelectorAll('.proyectos__tarjeta')
@@ -69,7 +70,7 @@ window.addEventListener('scroll', ()=>{
     let distContacto    = contacto.offsetTop
     
 
-    scrollY >= ( offsetContenedor - (innerHeight/1.1)) 
+    scrollY >= ( offsetContenedor - (innerHeight/1.2)) 
     ? classListContenedor.add('active')
     : classListContenedor.remove('active')
     
