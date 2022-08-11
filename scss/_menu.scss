@@ -169,6 +169,9 @@
         &.abajo{
             transition: all 1.2s ease;
             transition-delay: 1.7s;
+            @include tablet{
+                margin-top: 6rem;
+            }
         }
         @include tablet{
             flex-wrap: wrap;
@@ -176,12 +179,12 @@
             .menuMovil__izda{
                 justify-content: center;
                 margin: 0 auto 0;
-                flex-basis: 51%;
+                flex-basis: 95%;
             }
             .menuMovil__dcha{
                 justify-content: center;
                 margin: 5rem auto 0;
-                flex-basis: 51%;
+                flex-basis: 95%;
             }
         }
     }

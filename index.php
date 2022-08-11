@@ -25,13 +25,13 @@
                 </div>
                 <div class="proyectos__centro">
                     <div class="proyectos__overflow">
-                    <a href="https://github.com/Merche-gas/Fantic-2" target="blank" rel="noopener noreferrer"><p>fantic <span>by merche</span> </p></a>
+                    <a href="https://www.merchegas.es/Fantic/" target="blank" rel="noopener noreferrer"><p>fantic <span>by merche</span> </p></a>
                         
                     </div>
                 </div>
                 <div class="proyectos__dcha">
                     <h2 class="proyectos__h2">Fantic</h2>
-                    <a href="https://github.com/Merche-gas/Fantic-2" class="proyectos__a" target="blank" rel="noopener noreferrer" >VISITAR</a>
+                    <a href="https://www.merchegas.es/Fantic/" class="proyectos__a" target="blank" rel="noopener noreferrer" >VISITAR</a>
                 </div>
             </div>
             <div class="proyectos__tarjeta apple">
@@ -40,13 +40,13 @@
                 </div>
                 <div class="proyectos__centro">
                     <div class="proyectos__overflow">
-                    <a href="https://merche-gas.github.io/Apple/" target="blank" rel="noopener noreferrer"><p>apple <span>by merche</span> </p></a>
+                    <a href="https://www.merchegas.es/Apple/" target="blank" rel="noopener noreferrer"><p>apple <span>by merche</span> </p></a>
                         
                     </div>
                 </div>
                 <div class="proyectos__dcha">
                     <h2 class="proyectos__h2">Apple</h2>
-                    <a href="https://merche-gas.github.io/Apple/" target="blank" rel="noopener noreferrer" class="proyectos__a">VISITAR</a>
+                    <a href="https://www.merchegas.es/Apple/" target="blank" rel="noopener noreferrer" class="proyectos__a">VISITAR</a>
                 </div>
             </div>
             <div class="proyectos__tarjeta pixar">
@@ -55,13 +55,13 @@
                 </div>
                 <div class="proyectos__centro">
                     <div class="proyectos__overflow">
-                    <a href="https://merche-gas.github.io/Pixar/" target="blank" rel="noopener noreferrer" ><p>pixar <span>by merche</span> </p></a>
+                    <a href="https://www.merchegas.es/Pixar/" target="blank" rel="noopener noreferrer" ><p>pixar <span>by merche</span> </p></a>
                         
                     </div>
                 </div>
                 <div class="proyectos__dcha">
                     <h2 class="proyectos__h2">Pixar</h2>
-                    <a href="https://merche-gas.github.io/Pixar/" class="proyectos__a" target="blank" rel="noopener noreferrer" >VISITAR</a>
+                    <a href="https://www.merchegas.es/Pixar/" class="proyectos__a" target="blank" rel="noopener noreferrer" >VISITAR</a>
                 </div>
             </div>
             <div class="proyectos__tarjeta restaurante">
